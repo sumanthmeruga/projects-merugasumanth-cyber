@@ -1,0 +1,16 @@
+body{
+    font-family : Arial, sans-serif;
+    background-image: url('field-of-flowers.jpg');
+    color: rgb(0, 7, 2);
+    
+}
+header{
+   background: url("morefun_boy-3o7O_6fi7Qc-unsplash.jpg") no-repeat top right;
+    height: 150px;
+}
+
+.mylist{
+    list-style-image: url(pixcel.png)
+    
+}
+
