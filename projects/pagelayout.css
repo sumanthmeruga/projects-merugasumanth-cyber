@@ -2,6 +2,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     background: url(background.jpg);
+    background-size: cover;
+    background-origin: border-box;
+    background-clip: content-box;
 }
 nav {
     color: black;
@@ -21,6 +24,7 @@ header{
 }
 h1{
     text-shadow: 2px 2px 5px grey;
+    font-style: italic;
 }
 .clear {
     clear: both;
@@ -33,6 +37,7 @@ main {
     text-transform: none;
     padding-right:30px ;
     padding-left: 30px;
+    line-height: 1.6;
 }
 .floating {
     float: left;
@@ -54,6 +59,7 @@ nav a {
 footer{
     font-size: 20px;
     background: url(background.jpg);
+    font-size: italic;
 }
 footer p{
     text-align: center;
