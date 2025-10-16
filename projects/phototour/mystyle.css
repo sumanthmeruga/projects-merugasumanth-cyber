@@ -5,14 +5,17 @@ body {
 
     
 .mylist{
-    list-style-image: url(icon.png);
+    list-style-image: url('icon.jpg');
 }
 }
 
-.Hyderabad{
+.hyderabad{
     background-position: right;
     background-repeat: no-repeat;
-    background-image: url(logo.jpeg);
+    background-image: url(logo.jpg);
+    background-size: 150px 150px;
+    padding-right: 160px;
+    margin-bottom: 20px;
 }
 nav a {
    color:#22DD22 ; 
