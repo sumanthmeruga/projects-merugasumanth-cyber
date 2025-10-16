@@ -1,9 +1,9 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     background: url(background.jpg);
 }
-nav{
+nav {
     color: black;
 }
 .kolar {
@@ -12,7 +12,7 @@ nav{
 
 header{
     text-align: center;
-    background-color: rgb(red, green, blue);
+    background-color: blanchedalmond;
     margin: 25px;
     width: 80%;
     border: double 5px black;
@@ -22,23 +22,22 @@ header{
 h1{
     text-shadow: 2px 2px 5px grey;
 }
-.clear{
+.clear {
     clear: both;
 }
-main{
+main {
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     font-weight: bold;
-    line-height: 5opx;
     text-align: left;
     text-transform: none;
     padding-right:30px ;
     padding-left: 30px;
 }
-.floating{
+.floating {
     float: left;
 }
-#wrapper{
+#wrapper {
     background-color: bisque;
     width: 800px;
     margin: auto;
@@ -48,14 +47,13 @@ main{
 nav a {
     display: inline-block;
     padding: 5px 10px;
-    background-color:rgb(red, green, blue) ;
+    background-color: blanchedalmond;
     color: black;
     text-decoration: underline;
 }
 footer{
-    font-size: italic;
+    font-size: 20px;
     background: url(background.jpg);
-    right: no-repeat;
 }
 footer p{
     text-align: center;
