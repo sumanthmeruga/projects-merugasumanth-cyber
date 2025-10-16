@@ -1,0 +1,63 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+nav{
+    color: black;
+}
+.kolar {
+    float: left;
+}
+
+header{
+    text-align: center;
+    background-color: rgb(red, green, blue);
+    margin: 25px;
+    width: 80%;
+    border: double 5px black;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px grey;
+}
+h1{
+    text-shadow: 2px 2px 5px grey;
+}
+.clear{
+    clear: both;
+}
+main{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    line-height: 5opx;
+    text-align: left;
+    text-transform: none;
+    padding-right:30px ;
+    padding-left: 30px;
+}
+.floating{
+    float: left;
+}
+#wrapper{
+    background-color: bisque;
+    width: 800px;
+    margin: auto;
+    border: double 5px black;
+    border-radius: 25px;
+}
+nav a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color:rgb(red, green, blue) ;
+    color: black;
+    text-decoration: underline;
+}
+footer{
+    font-size: italic;
+    background: url(background.jpg);
+    right: no-repeat;
+}
+footer p{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
