@@ -24,6 +24,7 @@ nav a {
     display: flex;
     padding: 20px;
     flex-direction: row;
+    justify-content: center;
 }
 aside {
     width: 15%;
@@ -41,7 +42,7 @@ aside ul {
 main {
     width: 75%;
     display: flex;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
     gap: 20px;
     padding: 10px;
 }
@@ -52,7 +53,7 @@ article {
     padding: 10px;
     flex: 1 1 30%;
 }
-artcle img {
+article img {
     width: 100%;
     border-radius: 10px;
 }
