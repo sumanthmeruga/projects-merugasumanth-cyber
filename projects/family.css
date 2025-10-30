@@ -8,35 +8,29 @@ body {
 header {
     background-color: #2a9d8f;
     color: white;
-    padding: 20px;
-    text-align: center;
 }
 /* NAV BAR */
 nav {
     display: flex;
-    justify-content: space-around;
-    background-color: #264653;
-    padding: 10px;
+    justify-content: space-evenly;
 }
 nav a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: blue;
+    background-color: #e9c46a;
 }
-nav a:hover {
-    background-color: #333;
-}
+
 .container {
     display: flex;
     padding: 20px;
-    flex-wrap: wrap;
+    flex-direction: row;
 }
 aside {
-    width: 25%;
+    width: 15%;
     padding: 20px;
     background-color: #e9c46a;
 }
-asid img {
+aside img {
     width: 100%;
     border-radius: 10px;
 }
@@ -47,14 +41,14 @@ aside ul {
 main {
     width: 75%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 20px;
     padding: 10px;
 }
 article {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0,2);
+    box-shadow: 0 0 5px rgba(0,0,0,0);
     padding: 10px;
     flex: 1 1 30%;
 }
@@ -62,21 +56,32 @@ artcle img {
     width: 100%;
     border-radius: 10px;
 }
+
 footer{
-    text-emphasis: center;
+    text-align: center;
     padding: 15px;
     background-color: #2a9d8f;
     color: white;
 }
 /*Mobile view*/
 @media (max-width: 700px) {
+
+    body{ 
+        width: 100%;
+    }
     nav {
         flex-direction: column;
         align-items: center;
     }
+
+    .container {
+        flex-direction: column;
+    }
+
     aside {
         width: 100%;
         order: 2;
+        padding: 0;
     }
     main {
         width: 100%;
@@ -93,4 +98,4 @@ footer{
 
 
    
-    /* MAIN CONTENT */
+   
