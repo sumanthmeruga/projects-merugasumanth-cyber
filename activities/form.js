@@ -1,43 +1,70 @@
-document.getElementById('form').addEventListener ('submit',function(event) {
-event.preventDefault();
-alert("From Submitted");
-const fullname = document.getElementById('fname').value;
-const email = document.getElementById('fname').value;
-const password = document.getElementById('pass')
-const age = document.getElementById('state').value;
+document.getElementById("form").addEventListener("submit", handleSubmit);
 
-if (!fullname || !email) {
-    alert("you need a name and email.")
-    return;
-}
+function handleSubmit(event) {
+    event.preventDefault(); // stop page from reloading
 
-if (! password || email) {
-    alert("you need password and email")
-    return;
-}
-const formData = {
-    name: fullname,
-    email: email,
-    password: password,
-    State: state,
-};
-console.log(formData);
+    // ------ Collect Inputs ------
+    const fullname = document.getElementById("fname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("pass").value.trim();
+    const state = document.getElementById("state").value;
 
+    // ------ Validations ------
 
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "submit.json", true);
-xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-xhr.onreadystatechange = function() {
+    if (!fullname) {
+        alert("Please enter your full name.");
+        return;
+    }
+
+    if (!email) {
+        alert("Please enter your email.");
+        return;
+    }
+
+    if (state === "blank") {
+        alert("Please select your state.");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return;
+    }
+
+    // ------ Create the form data object ------
+    const formData = {
+        name: fullname,
+        email: email,
+        password: password,
+        state: state
+    };
+
+    console.log("Form Data:", formData);
+
+    // ------ AJAX Request ------
+    const xhr = new XMLHttpRequest();
+
+    // GitHub Pages requires GET request
+    xhr.open("GET", "submit.json", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+    xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            alert("Form submitted successfully!");
+
             const response = JSON.parse(xhr.responseText);
-            console.log(response);
-            //document.getElementById('myForm').reset();
-            document.getElementById('myForm').innerHTML = '';
-            document.getElementById('message').innerText = response.message;
-        } else if (xhr.readyState === 4) {
-                alert("Error submitting form.");
+
+            // show message from JSON response
+            document.getElementById("message").innerText = response.message;
+
+            alert("Form submitted successfully!");
+
+            // reset form
+            document.getElementById("form").reset();
+        } 
+        else if (xhr.readyState === 4) {
+            alert("Error submitting form.");
         }
-     };
-     xhr.send(JSON.stringify(formData));
-});
+    };
+
+    xhr.send();
+}

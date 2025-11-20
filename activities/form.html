@@ -3,79 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Form Project</title>
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
     <header>
-        <h1>Sumanth meruga web design</h1>
+        <h1>Sumanth Meruga Web Design</h1>
     </header>
+
     <main>
-        <div id="message"> </div>
+        <div id="message"></div>
+
         <h1>Forms</h1>
-        <form id="form" action="formprocess.html" method="get">
+
+        <form id="form">
             <div class="form-row">
                 <label for="fname">Full Name:</label>
-                <input type="Text" name="fullname" placeholder="Full Name" id="fname">
+                <input type="text" id="fname" name="fullname" placeholder="Full Name">
             </div>
+
             <div class="form-row">
-                <label for="fname">Email:</label>
-                <input type="email" name="fullname" value="your@gmail.com" id="fname">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="your@gmail.com">
             </div>
+
             <div class="form-row">
-                <label for="Pass">Passward</label>
-                <input type="passward" name="pass" id="pass">
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass">
             </div>
+
             <div class="form-row">
-                <label form="state">State</label>
+                <label for="state">State:</label>
                 <select name="state" id="state">
                     <option value="blank">----</option>
                     <option value="IA">India</option>
                     <option value="HI">Bangkok</option>
-                    <option value="UT">missiouri</option>
+                    <option value="UT">Missouri</option>
                 </select>
             </div>
-            <div class="check-row">
-                <div class="spacer"></div>
-                <label><input type="checkbox">I agree to the terms</label>
-            </div>
-            <div class="check-row">
-                <div class="spacer">Gender:</div>
-                
-                <label><input type="radio" name="male">Male</label>
-                <label><input type="radio" name="female">Female</label>
-            
-            </div>
+
             <div class="form-row">
-                <label for="comment">Comment:</label>
-                <textarea name="comment" id="comment">Hello</textarea>
-            </div>
-            <div class="form-row">
-                <div class="spacer"></div>
                 <input type="submit" value="Sign up">
             </div>
         </form>
-                 <p>1. Action: The action attribute indicates to the form where to send the data when the user submits it. p
-                 <p> Method: The method attribute indicates to the form how to send the data (which HTTP method to use). </p>
-                 <p> POST vs GET: GET sends data in the URL to retrieve information while POST sends the data hidden in the request body to submit/save the data. </p>
-                 <p> What is JavaScript? Why is it called JavaScript? </p>
-                 <p>  JavaScript is a programming language used primarily to make websites interactive (things like buttons, animations, forms, etc.) It started as mocha, then live-script, and was later renamed JavaScript to get greater marketing appeal, mainly because of the popularity of the language Java during that time and Netscape wanted more developers to consider using it. </p>
-                 <p> What are the two ways that you can run JavaScript? </p>
-                 <p> In the browser (Chrome, Firefox, Safari, Edge) </p>
-                 <p> On server (using Node.js) </p>
-                 <p> What was the most popular front end JS library? </p>
-                 <p> jQuery was the most popular front end JavaScript library for many years.  </p>
-                 <p> What is the most popular front end JS Library today? </p>
-                 <p> React is the most popular front end JavaScript library today. </p>
-                 <p> What is AJAX? </p>
-                 <p>AJAX will allow websites to send receive data in background, and to update part of the page  </p>
-
-                    
     </main>
+
     <footer>
-        &copy;Sumanthmeruga@2025
+        &copy; Sumanth Meruga @ 2025
     </footer>
+
     <script src="form.js"></script>
-    
 </body>
 </html>
