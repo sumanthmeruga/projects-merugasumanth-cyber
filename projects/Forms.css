@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: color #f0f8ff;
+    background-color: #f0f8ff;
     margin: 0;
     color: #333; 
 }
@@ -42,7 +42,7 @@ legend {
 }
 .form-row {
     display: flex;
-    flex-direction: centre;
+    flex-direction: row;
     margin-bottom: 15px;
 }
 .form-row label {
@@ -80,13 +80,24 @@ button:hover {
     background-color:#004c99;
 }
 @media (max-width: 600px) {
+    form {
+        width: 90%;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
     .form-row {
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
     }
     .form-row label {
         width: 100%;
         margin-bottom: 5px;
+    }
+    .form-row textarea{
+        width: 90%;
     }
 }
 button {
