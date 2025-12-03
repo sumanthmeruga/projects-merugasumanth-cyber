@@ -1,0 +1,220 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  font-style: oblique;
+  background: #ece4e4 url("test.jpeg") center/cover no-repeat fixed;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== HEADER & NAVBAR ===== */
+.site-header {
+  background: #5ed192;
+  color: rgb(235, 224, 224);
+  padding: 1rem 0;
+}
+
+.navbar {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.6rem;
+}
+
+.nav-links a {
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+  background: #6b74dc;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-toggle {
+  display: none;
+  padding: 0.4rem 0.6rem;
+  background: #1b2535;
+  border: none;
+  color: rgb(227, 223, 223);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* ===== HERO SECTION (HOME PAGE) ===== */
+.hero {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.hero .intro {
+  width: 50%;
+}
+
+/* ===== GRID CARDS (HIDDEN PLACES, ADVENTURE EXPERIENCE) ===== */
+.grid {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== TABLE (TRAVEL AGENDA PAGE) ===== */
+.table-wrap {
+  max-width: 900px;
+  margin: auto;
+  background: rgb(246, 246, 246);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.7rem;
+}
+
+thead th {
+  background: #f1f1f1;
+}
+
+/* ===== FORM (CONTACT PAGE) ===== */
+form {
+  max-width: 600px;
+  margin: auto;
+  background: rgb(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+  background: #5eabd1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background: #6b74dc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #5eabd1;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero img,
+  .hero .intro {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #5eabd1;
+  color: rgb(235, 224, 224);
+  margin-top: 2rem;
+}
