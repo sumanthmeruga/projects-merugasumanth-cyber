@@ -1,0 +1,263 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f3f3f3;
+  color: #222;
+  padding-bottom: 40px;
+  overflow-x: hidden; /* Prevent page overflow */
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: #004d7a;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-inner {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* ===== NAVIGATION ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: red;   
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: #ff9999;  
+}
+
+nav ul li a.active {
+  background: #ff6666;  
+  color: white;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #003f63;
+}
+
+.card h3 {
+  margin-top: 20px;
+  color: #005f8c;
+}
+
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.responsive-img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+/* ===== TABLES ===== */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+
+  /* FIX: remove forced overflow */
+  table-layout: auto;
+}
+
+table caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #004d7a;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  word-break: break-word; /* prevents overflow */
+}
+
+table th {
+  background: #004d7a;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background: #f0f7ff;
+}
+
+/* ===== FORMS ===== */
+form fieldset {
+  border: 2px solid #004d7a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form legend {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #004d7a;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  padding: 12px;
+  background: red;  
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button:hover {
+    background: #cc0000; 
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 18px;
+  background: #004d7a;
+  color: white;
+  margin-top: 30px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 900px) {
+  nav ul {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li a {
+    width: 100%;
+    display: block;
+    padding: 12px;
+    background: #ff9999; 
+    border-radius: 10px;
+  }
+
+  nav ul li a.active {
+    background: #ff6666; 
+    color: white;
+  }
+
+  /* FIX TABLE ON SMALL SCREENS */
+  table {
+    table-layout: fixed;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    padding: 10px;
+  }
+}
